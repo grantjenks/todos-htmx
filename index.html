@@ -1,0 +1,17 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Todos</title>
+    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+  </head>
+  <body>
+    <div id="content">
+      <form method="post" hx-post="" hx-select="#content" hx-target="#content" hx-swap="outerHTML">
+        <input name="insert">
+      </form>
+      <ol id="items" hx-get="" hx-trigger="every 3s" hx-select="#items" hx-target="#items" hx-swap="outerHTML">
+        {todos}
+      </ol>
+    </div>
+  </body>
+</html>
